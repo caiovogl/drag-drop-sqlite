@@ -1,0 +1,43 @@
+.example-parent {
+    border: 2px solid #DFA612;
+    color: black;
+    display: flex;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.models{
+    display: none;
+}
+
+.example-origin {
+flex-basis: 100%;
+flex-grow: 1;
+padding: 10px;
+flex-direction: column;
+width: 40%;
+}
+
+.example-draggable {
+background-color: #4AAE9B;
+font-weight: normal;
+margin-bottom: 10px;
+margin-top: 10px;
+padding: 10px;
+}
+
+.example-dropzone {
+background-color: #6DB65B;
+flex-basis: 100%;
+flex-grow: 1;
+padding: 10px;
+}
+
+.para_fazer{
+    background-color: rgb(223, 74, 74);
+}
+
+.fazendo{
+    background-color: #DFA612;
+}
+

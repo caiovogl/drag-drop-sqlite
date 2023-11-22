@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="models">
+      <div
+            id="draggable-1"
+            class="example-draggable"
+            draggable="true"
+            ondragstart="onDragStart(event);"
+      >
+      </div>
+    </div>
+    <div class="example-parent">
+        <div class="example-origin"
+            ondragover="onDragOver(event);"
+            ondrop="onDrop(event);"
+            >
+            Funcionários
+          > 
+          <% for (let i = 0; i < nomes.length; i++) { %>
+            <div
+            id="draggable-<%= nomes[i].id+1 %>"
+            class="<%= nomes[i].chefe %> example-draggable"
+            draggable="true"
+            ondragstart="onDragStart(event);"
+            >
+            <%= nomes[i].nome %>
+            </div>
+          <% } %>
+        </div>
+      
+        <div
+          class="example-dropzone para_fazer"
+          ondragover="onDragOver(event);"
+          ondrop="onDrop(event);"
+        >
+          Front-end
+        </div>
+        <div
+          class="example-dropzone fazendo"
+          ondragover="onDragOver(event);"
+          ondrop="onDrop(event);"
+        >
+          Back-end
+        </div>
+        <div
+          class="example-dropzone"
+          ondragover="onDragOver(event);"
+          ondrop="onDrop(event);"
+        >
+          Full-stack
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
